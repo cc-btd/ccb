@@ -1,0 +1,149 @@
+@function px2rem($px, $rem: 75) {
+    @return $px / $rem * 1rem;
+} 
+
+
+html,
+body,
+#app {
+    height: 100%;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: px2rem(80);
+    background-color: rgb(248, 107, 164);
+}
+
+section {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    .left {
+        width: px2rem(170);
+        >div {
+            .left-content {
+                ul {
+                    width: px2rem(172);
+                    height: 100%;
+                    background-color: #F8F8F8;
+                    li {
+                        padding: px2rem(25);
+                        font-size: px2rem(28);
+                        text-align: center;
+                    }
+                    .cur {
+                        background-color: #FFF;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    .right {
+        flex: 1;
+        overflow: hidden;
+        .right-top {
+            position: relative;
+            height: px2rem(70);
+            >div {
+                position: absolute;
+                .top-content {
+                    ul {
+                        display: flex;
+                        li {
+                            padding: px2rem(15) 0;
+                            font-size: px2rem(26);                           
+                            width: px2rem(130);
+                            margin: 0 px2rem(20);
+                            text-align: center;
+                        }
+                        .active {
+                            color: #FF4891;
+                        }
+                    }
+                }
+            }
+        }
+        .right-bottom {
+            height: 90%;
+            overflow: hidden;
+            >div {
+                ul {
+                    >p {
+                        margin-left: px2rem(15);
+                        padding-bottom: px2rem(10);
+                        margin-right: px2rem(20);
+                        margin-top: px2rem(20);
+                        color: rgb(151, 150, 150);
+                        border-bottom: 1px solid #ccc;
+                    }
+                    li {
+                        margin-top: px2rem(20);
+                        margin-right: px2rem(20);
+                        margin-left: px2rem(15);
+                        border-bottom: 1px solid #ccc;
+                        dl{
+                            display: flex;
+                            dt {
+                                
+                                img {
+                                    width: px2rem(185);
+                                    height: px2rem(185);
+                                }
+                            }
+                            dd {
+                                margin-top: px2rem(20);
+                                >div {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    div:nth-child(2) {
+                                       .imgs {
+                                        //    display: none;
+                                            img {
+                                                width: px2rem(80);
+                                                height: px2rem(80);
+        
+                                            }
+                                       }
+                                       
+                                        .comp{
+                                            display: flex;
+                                            display: none;
+                                            margin-top: px2rem(15);
+                                            div {
+                                               width: px2rem(45);
+                                               height: px2rem(45);
+                                               line-height: px2rem(50);
+                                               border-radius: 50%;
+                                               background-color: #FF4891;
+                                               text-align: center;
+                                               color: #fff;
+                                            }
+                                            span {
+                                                line-height: px2rem(45);
+                                                padding-left: px2rem(15);
+                                                padding-right: px2rem(15);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+footer {
+    height: px2rem(80);
+    background-color: rgb(248, 107, 164);
+}
